@@ -1,0 +1,6 @@
+https://live-team.pages.debian.net/live-manual/html/live-manual/customization-overview.en.html
+
+https://www.kali.org/docs/development/live-build-a-custom-kali-iso/
+
+https://www.kali.org/docs/general-use/metapackages/
+https://tools.kali.org/kali-metapackages

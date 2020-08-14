@@ -1,0 +1,13 @@
+[] electrum
+[] osmocom_fft
+[] gqrx
+[] keeper
+[] sublime text
+[] sublime merge
+[] termius
+[] visual studio code
+
+kali-linux-core
+kali-linux-default
+kali-desktop-live
+kali-desktop-xfce
