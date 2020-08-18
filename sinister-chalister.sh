@@ -1,5 +1,33 @@
 #!/bin/bash
 
+mkdir /root/ap
+
+(
+interface=wlan1
+dhcp-range=192.168.1.2,192.168.1.30,255.255.255.0,12h
+dhcp-option=3,192.168.1.1
+dhcp-option=6,192.168.1.1
+server=8.8.8.8
+log-queries
+log-dhcp
+listen-address=127.0.0.1
+)>>/root/ap/dnsmasq.conf
+
+(
+interface=wlan1
+driver=nl80211
+ssid=sinister-chalister
+hw_mode=g
+channel=6
+macaddr_acl=0
+ignore_broadcast_ssid=0
+auth_algs=1
+wpa=2
+wpa_key_mgmt=WPA-PSK
+rsn_pairwise=TKIP
+wpa_passphrase=deviant_pk
+)>>/root/ap/hostapd.conf
+
 nmcli dev status
 cp /etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf.old
 (
